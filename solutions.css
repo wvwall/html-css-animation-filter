@@ -87,12 +87,12 @@
 @keyframes spinna {
   /* antiorario */
   0% {
-    transform: rotate(1.5turn);
+    transform: rotate(360deg);
   }
 
   /* orario */
   /* 100% {
-    transform: rotate(1.5turn);
+    transform: rotate(360deg);
   } */
 }
 .ex-10-icon {
@@ -101,16 +101,108 @@
 
 /* ESERCIZIO 11 */
 
-@keyframes spinnaMaNonTroppo {
+@keyframes spinnaeTorna {
 
   0% {
     transform: rotate(0);
   }
   75%{
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
-  
+
 }
 .ex-11-icon:hover {
-  animation: spinnaMaNonTroppo 1s linear;
+  animation: spinnaeTorna 1s linear;
+}
+
+/* ESERCIZIO 12 */
+
+ @keyframes ruotaTop {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: calc(100% - 60px);
+  }
+  100% {
+      left: 10%;
+    }
+}
+.ex-12-button:hover .ex-12-top-white {
+  animation: ruotaTop 2s linear;
+}
+
+@keyframes ruotaBottom {
+  0% {
+    right: 20%;
+  }
+  50% {
+    right: calc(100% - 60px);
+  }
+  100% {
+      right: 20%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white {
+  animation: ruotaBottom 2s linear;
+}
+
+/* ESERCIZIO 13 */
+
+
+ @keyframes ruotaTopGiro {
+  0% {
+    left: 10%;
+    top: -10%;
+  }
+  30% {
+    left: 100%;
+    top: -10%;
+  }
+  50% {
+    left: calc(100% - 60px);
+    top: 100%;
+  }
+  70% {
+    left: 0;
+    top: 100%;
+  }
+  90%{
+    left: 0;
+    top: 0;
+  }
+  100% {
+      left:10%;
+    }
+}
+.ex-13-button:hover .ex-13-top-white {
+  animation: ruotaTopGiro 2s linear;
+}
+
+@keyframes ruotaBottomGiro {
+  0% {
+    right: 20%;
+    bottom: -10%;
+  }
+  30% {
+    right: 100%;
+    bottom: -10%;
+  }
+  50% {
+    right: calc(100% - 60px);
+  }
+  70% {
+    right: 0;
+    bottom: 100%;
+  }
+  90%{
+    right: 0;
+    bottom: 0;
+  }
+  100% {
+      right: 20%;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+  animation: ruotaBottomGiro 2s linear ;
 }
